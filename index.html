@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>intersection-observer</title>
+    <style>
+        section {
+            margin-top: 1000px;
+        }
+        .line1,.line2,.line3 {
+            position: relative;
+        }
+        .line1::after {
+            content:'';
+            position: absolute;
+            width: 0;
+            height: 5px;
+            bottom: 0;
+            left: 0;
+            background-color: red;
+        }
+        .line2::after {
+            content:'';
+            position: absolute;
+            width: 0;
+            height: 5px;
+            bottom: 0;
+            left: 0;
+            background-color: blue;
+        }
+        .line3::after {
+            content:'';
+            position: absolute;
+            width: 0;
+            height: 5px;
+            bottom: 0;
+            left: 0;
+            background-color: green;
+        }
+        .anime::after {
+            animation-name: border;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        @keyframes border {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>intersection-observer</h1>
+    <section>
+        <h1 class="line1 js-line">step1</h1>
+    </section>
+    <section>
+        <h1 class="line2 js-line">step2</h1>
+    </section>
+    <section>
+        <h1 class="line3 js-line">step3</h1>
+    </section>
+    <script src="node_modules/intersection-observer/intersection-observer.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

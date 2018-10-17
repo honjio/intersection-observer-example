@@ -1,0 +1,11 @@
+{
+  "name": "intersection_observer_example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://git.dmm.com/fujino-yuki/intersection-observer-example.git",
+  "author": "藤野 勇輝@DES <fujino-yuki@dmm.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "intersection-observer": "^0.5.0"
+  }
+}
